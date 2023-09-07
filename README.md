@@ -45,6 +45,13 @@ module.exports={
 npx husky add .husky/commit-msg "npx --no-install commitlint -e $HUSKY_GIT_PARAMS"
 
 
+# 选择打包工具
+我们项目特点
+1、是库 而不是业务项目
+2、希望工具尽可能简洁、打包产物可读性高
+使用 rollip打包  
+pnpm i rollup -D -w
+
 
 
 
