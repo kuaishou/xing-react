@@ -52,6 +52,9 @@ npx husky add .husky/commit-msg "npx --no-install commitlint -e $HUSKY_GIT_PARAM
 使用 rollip打包  
 pnpm i rollup -D -w
 
+pnpm i -D -w rollup-plugin-typescript2
+pnpm i -D -w @rollup/plugin-commonjs
+
 
 
 

@@ -4,14 +4,15 @@
   "description": "卡颂从0写一个react18",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --ext .js,.ts,.jsx,.tsx --fix --quiet ./packages"
+    "lint": "eslint --ext .js,.ts,.jsx,.tsx --fix --quiet ./packages",
+    "build:dev": "rollup --bundleConfigAsCjs --config scripts/rollup/react.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@commitlint/config-conventional": "^17.7.0",
+    "@rollup/plugin-commonjs": "^25.0.4",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
     "commitlint": "^17.7.1",
@@ -21,6 +22,7 @@
     "husky": "^8.0.3",
     "prettier": "^3.0.3",
     "rollup": "^3.29.0",
+    "rollup-plugin-typescript2": "^0.35.0",
     "typescript": "^5.2.2"
   },
   "pnpm": {
