@@ -56,7 +56,20 @@ pnpm i -D -w rollup-plugin-typescript2
 pnpm i -D -w @rollup/plugin-commonjs
 
 
+删除打包模块插件
+pnpm i -D -w rimraf
 
+打包之后生成package.json 插件
+pnpm i -D -w rollup-plugin-generate-package-json
+ 
+
+打包之后 cd到react文件  
+ cd dist/node_module/react/
+ 执行pnpm link --global  全局react指向打包之后的react
+
+
+在其他文件目录创建一个react项目npx create-react-app react-demo  引用我们打包之后的react
+在react-demo项目执行 pnpm link react --global   把demo项目的react引用指向我们打包的引用
 
 
 

@@ -18,12 +18,12 @@ export function resolvePkgPath(pkgName,isDist){//获取打包路径
 
 export function getPackageJSON(pkgName){
     //...包的路径
-    const path =`${resolvePkgPath(pkgName)}.package.json`
+    const path =`${resolvePkgPath(pkgName)}/package.json`
     const str=fs.readFileSync(path,{encoding:'utf-8'})
     return JSON.parse(str)
 }
 
-export function getBaseRollupPlugins({typescript:{}}){
+export function getBaseRollupPlugins({typescript={}}={}){
     return [cjs(),ts(typescript)]
 
 }
